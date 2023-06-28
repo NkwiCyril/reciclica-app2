@@ -1,0 +1,12 @@
+ion-button {
+    text-transform: initial;
+    margin: 10px auto;
+}
+.btn {
+    display: flex;
+    flex-direction: column;
+}
+.btn:hover {
+    text-decoration: underline;
+    transition: all .3s ease-in-out;
+}

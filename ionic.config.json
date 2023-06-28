@@ -1,0 +1,7 @@
+{
+  "name": "Bryden",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

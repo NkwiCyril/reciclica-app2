@@ -1,2 +1,2 @@
-# reciclica-app2
+# reciclica-app
 waste management application
