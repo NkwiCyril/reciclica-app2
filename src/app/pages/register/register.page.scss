@@ -1,0 +1,11 @@
+ion-content {
+    font-family: "Poppins", sans-serif;
+    --background: var(--ion-color-success)
+}
+
+ion-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
