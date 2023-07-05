@@ -1,5 +1,5 @@
 <ion-card>
-  <ion-card-header>
+  <ion-card-header *ngif="hasHeader">
     <ion-card-subtitle>Last pickup call</ion-card-subtitle>
   </ion-card-header>
 
@@ -18,7 +18,7 @@
         <p>Notes: We have two full bags of waste. One with plastics and another with glass.</p>
       </ion-label>
     </ion-item>
-    <ion-button  fill="clear" color="success" size="full" shape="round">
+    <ion-button *ngif="hasFooter" fill="clear" color="success" size="full" shape="round">
       See all...
     </ion-button>
   </ion-card-content>
