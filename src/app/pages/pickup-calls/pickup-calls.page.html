@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar color="success">
+  <ion-buttons slot="start">
+    <ion-back-button text=""></ion-back-button>
+  </ion-buttons>
+    <ion-title>My Pickup Calls</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-pickup-call-card></app-pickup-call-card>
+  <ion-card>    
+    <ion-card-content>
+      <ion-item lines="none">
+        <ion-icon slot="start" name="hourglass-outline" color="warning"></ion-icon>
+        <ion-label>
+          On Hold
+          <p>07/03/2023 10:00:00</p>
+        </ion-label>
+      </ion-item> 
+
+      <ion-item lines="none">
+        <ion-label>
+          <p>Created at 03/03/2023</p>
+          <p>Notes: We have two full bags of waste. One with plastics and another with glass.</p>
+        </ion-label>
+      </ion-item> 
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+
+      <ion-item lines="none">
+        <ion-icon slot="start" name="archive-outline" color="secondary"></ion-icon>
+        <ion-label>
+          Processing
+          <p>08/03/2023 11:00:00</p>
+        </ion-label>
+      </ion-item> 
+
+      <ion-item lines="none">
+        <ion-label>
+          <p>Created at 04/03/2023</p>
+          <p>Notes: We have two full bags.</p>
+        </ion-label>
+      </ion-item> 
+    </ion-card-content>
+  </ion-card>  
+
+  <ion-card>
+  <ion-card-content>
+
+      <ion-item lines="none">
+        <ion-icon slot="start" name="checkmark-circle-outline" color="success"></ion-icon>
+        <ion-label>
+          Finished
+          <p>02/04/2023 11:00:00</p>
+        </ion-label>
+      </ion-item>   
+
+      <ion-item lines="none">
+        <ion-label>
+          <p>Created at 05/03/2023</p>
+        </ion-label>
+      </ion-item> 
+
+      <ion-item>
+        <ion-icon slot="start" name="trophy" color="success"></ion-icon>
+        <ion-icon slot="end" name="star" color="warning"></ion-icon>
+        <ion-label>XAF 1500</ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
