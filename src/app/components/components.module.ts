@@ -12,7 +12,7 @@ import { PickupCallCardComponent } from "./pickup-call-card/pickup-call-card.com
         CommonModule,
         FormsModule,
         IonicModule
-    ],
+    ], 
     declarations: [PickupCallCardComponent],
     exports: [PickupCallCardComponent]
 })

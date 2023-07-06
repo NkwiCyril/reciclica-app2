@@ -1,25 +1,54 @@
 <ion-card>
-  <ion-card-header *ngif="hasHeader">
+  <ion-card-header *ngIf="hasHeader">
     <ion-card-subtitle>Last pickup call</ion-card-subtitle>
   </ion-card-header>
 
   <ion-card-content>
     <ion-item lines="none">
-      <ion-icon slot="start" name="hourglass-outline" color="success"></ion-icon>
+      <ion-icon
+        *ngIf="status == 'On Hold'"
+        slot="start"
+        name="hourglass-outline"
+        color="warning"
+      ></ion-icon>
+      <ion-icon
+        *ngIf="status == 'Processing'" 
+        slot="start"
+        name="archive-outline"
+        color="secondary"
+      ></ion-icon>
+      <ion-icon
+        *ngIf="status == 'Finished'"
+        slot="start"
+        name="checkmark-circle-outline"
+        color="success"
+      ></ion-icon>
       <ion-label>
-        On Hold
-        <p>07/2/2023 20:20:00</p>
+        <span *ngIf="status == 'On Hold'">On Hold</span>
+        <span *ngIf="status == 'Processing'">Processing</span>
+        <span *ngIf="status == 'Finished'">Finished</span>
+        <p>{{ updateAt }}</p>
       </ion-label>
     </ion-item>
 
-    <ion-item lines="none">
+    <ion-item lines="none" >
       <ion-label>
-        <p>Created in 07/2/2023</p>
-        <p>Notes: We have two full bags of waste. One with plastics and another with glass.</p>
+        <p>Created in {{ createdAt }}</p>
+        <p *ngIf="notes">{{ notes }}</p>
       </ion-label>
     </ion-item>
-    <ion-button *ngif="hasFooter" fill="clear" color="success" size="full" shape="round">
+    <ion-button
+      *ngIf="hasFooter"
+      fill="clear"
+      color="success"
+      size="full"
+      shape="round"
+    >
       See all...
     </ion-button>
+    <ion-item *ngIf="status == 'Finished'">
+      <ion-icon slot="start" name="trophy" color="success"></ion-icon>
+      <ion-label>{{ value }}</ion-label>
+    </ion-item>
   </ion-card-content>
 </ion-card>
