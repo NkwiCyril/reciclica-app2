@@ -1,11 +1,11 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { PickupCallsPage } from './pickup-calls.page';
 
 describe('PickupCallsPage', () => {
   let component: PickupCallsPage;
   let fixture: ComponentFixture<PickupCallsPage>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     fixture = TestBed.createComponent(PickupCallsPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -15,3 +15,7 @@ describe('PickupCallsPage', () => {
     expect(component).toBeTruthy();
   });
 });
+
+function async(arg0: () => void): jasmine.ImplementationCallback {
+  throw new Error('Function not implemented.');
+}
