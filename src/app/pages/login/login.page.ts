@@ -15,8 +15,12 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
-  navigate() {
+  register() {
     this.router.navigate(['/register'])
+  }
+
+  home() {
+      this.router.navigate(['/home'])
   }
 
 }

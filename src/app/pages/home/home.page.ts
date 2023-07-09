@@ -10,9 +10,13 @@ export class HomePage implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit() {}
-  onClick() {
-    setInterval(() => {
-      this.router.navigate(['/pickup-calls']);
-    }, 1000);
+
+  pCs() {
+    this.router.navigate(['/pickup-calls']);
   }
+
+  pC() {
+    this.router.navigate(['/pickup-call'])
+  }
+
 }
