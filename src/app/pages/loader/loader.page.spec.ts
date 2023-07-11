@@ -5,7 +5,7 @@ describe('LoaderPage', () => {
   let component: LoaderPage;
   let fixture: ComponentFixture<LoaderPage>;
 
-  beforeEach(waitForAsync(() => {
+  beforeEach(async(() => {
     fixture = TestBed.createComponent(LoaderPage);
     component = fixture.componentInstance;
     fixture.detectChanges();

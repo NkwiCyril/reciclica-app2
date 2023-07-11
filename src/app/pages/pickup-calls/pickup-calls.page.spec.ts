@@ -5,7 +5,7 @@ describe('PickupCallsPage', () => {
   let component: PickupCallsPage;
   let fixture: ComponentFixture<PickupCallsPage>;
 
-  beforeEach(waitForAsync(() => {
+  beforeEach(async(() => {
     fixture = TestBed.createComponent(PickupCallsPage);
     component = fixture.componentInstance;
     fixture.detectChanges();

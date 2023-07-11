@@ -1,6 +1,7 @@
 ion-button {
     text-transform: initial;
     margin: 10px auto;
+
 }
 
 ion-content {
@@ -14,6 +15,10 @@ ion-input {
 .btn {
     display: flex;
     flex-direction: column;
+}
+
+.register {
+    color: #2dd36f;
 }
 
 .btn:hover {
