@@ -1,22 +1,30 @@
 <ion-content>
   <div class="flex-center">
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title color="success">Reciclica</ion-card-title>
-      </ion-card-header>
-    
-      <ion-card-content>
-        <ion-item>
-          <ion-input label="Email" labelPlacement="floating" placeholder="Enter your email" type="email" ></ion-input>
-        </ion-item>        
-        <ion-item>
-          <ion-input label="Password" labelPlacement="floating" placeholder="Enter your password" type="password" ></ion-input>
-        </ion-item>
-        <ion-button color="dark" size="full" shape="round" color="success" (click)="home()">Login</ion-button>
-        <ion-button color="dark" size="full" shape="round" (click)="register()" fill="clear" class="register">Register</ion-button>
-        <ion-button color="dark" shape="round" class="btn" fill="clear">Forgot password</ion-button>
-      </ion-card-content>
-    </ion-card>
+    <form [formGroup]="form">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title color="success">Reciclica</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="email" formControlName="email"></ion-input>
+          </ion-item>
+          <ion-label color="danger" *ngIf="form.get('email')!.touched && form.get('email')!.errors?.['email']">Email is invalid!</ion-label>
+          <ion-label color="danger" *ngIf="form.get('email')!.touched && form.get('email')!.errors?.['required']">Email is mandatory!</ion-label>
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="password" formControlName="password"></ion-input>
+          </ion-item>
+          <ion-label color="danger" *ngIf="form.get('password')!.touched && form.get('password')!.errors?.['required']">Email is mandatory!</ion-label>
+
+          <ion-button color="dark" size="full" shape="round" color="success" (click)="home()" [disabled]="!form.valid">Login</ion-button>
+          <ion-button color="dark" size="full" shape="round" (click)="register()" fill="clear"
+            class="register">Register</ion-button>
+          <ion-button color="dark" shape="round" class="btn" fill="clear">Forgot password</ion-button>
+        </ion-card-content>
+      </ion-card>
+      </form>
   </div>
-  
 </ion-content>
