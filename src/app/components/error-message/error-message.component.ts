@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-error-message',
@@ -7,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ErrorMessageComponent  implements OnInit {
 
+  @Input() message!: string | undefined;
+  @Input() field!: FormGroup;
   constructor() { }
 
   ngOnInit() {}
+
+  showComponent() {
+    return false;
+  }
 
 }
