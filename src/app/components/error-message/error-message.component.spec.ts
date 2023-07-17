@@ -18,7 +18,9 @@ describe('ErrorMessageComponent', () => {
     fixture.detectChanges();
   }));
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  it('should show error on field touched and error present', () =>{
+
+    expect(component.showComponent()).toBeFalsy();
+
+  })
 });
