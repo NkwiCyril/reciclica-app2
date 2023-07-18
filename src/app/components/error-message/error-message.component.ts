@@ -8,13 +8,17 @@ import { FormGroup } from '@angular/forms';
 })
 export class ErrorMessageComponent  implements OnInit {
 
-  @Input() message!: string | undefined;
+  @Input() message!: string;
   @Input() field!: FormGroup;
   constructor() { }
 
   ngOnInit() {}
 
   showComponent() {
+    // "form.get('email')!.touched && form.get('email')!.errors?.['required']
+    if (this.field.touched && this.field.errors?.['required']) {
+      return true;
+    }
     return false;
   }
 
