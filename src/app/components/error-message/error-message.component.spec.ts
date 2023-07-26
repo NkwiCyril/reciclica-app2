@@ -3,7 +3,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { ErrorMessageComponent } from './error-message.component';
 import { FormControl, FormGroup } from '@angular/forms';
-
+ 
 describe('ErrorMessageComponent', () => {
   let component: ErrorMessageComponent;
   let fixture: ComponentFixture<ErrorMessageComponent>;
@@ -18,12 +18,11 @@ describe('ErrorMessageComponent', () => {
     component = fixture.componentInstance;
   }));
 
-  it('should show error on field touched and error present', () =>{
+  it('should show error on field touched and error present', () => {
     component.field = new FormGroup({email: new FormControl()});
     component.field.markAllAsTouched();
     component.field.setErrors({required: true})
     
-    expect(component.showComponent()).toBeTruthy();
-
+    expect(component.shouldShowComponent()).toBeTruthy();
   })
 });
