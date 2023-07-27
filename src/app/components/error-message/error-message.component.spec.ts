@@ -18,11 +18,5 @@ describe('ErrorMessageComponent', () => {
     component = fixture.componentInstance;
   }));
 
-  it('should show error on field touched and error present', () => {
-    component.field = new FormGroup({email: new FormControl()});
-    component.field.markAllAsTouched();
-    component.field.setErrors({required: true})
-    
-    expect(component.shouldShowComponent()).toBeTruthy();
-  })
+
 });

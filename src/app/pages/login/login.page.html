@@ -11,8 +11,8 @@
             <ion-label position="floating">Email</ion-label>
             <ion-input type="email" formControlName="email"></ion-input>
           </ion-item>
-          <app-error-message message="Email is mandatory!" [field] ="form.get('email')!.value"></app-error-message>
-          <ion-label color="danger" *ngIf="form.get('email')!.touched && form.get('email')!.errors?.['email']">Email is invalid!</ion-label>
+          <app-error-message message = "Email is mandatory!" *ngIf = "form.get('email')!.touched && form.get('email')!.errors?.['required']"></app-error-message>
+          <app-error-message message = "Email is invalid!" *ngIf = "form.get('email')!.touched && form.get('email')!.errors?.['email']"></app-error-message>
           <ion-item>
             <ion-label position="floating">Password</ion-label>
             <ion-input type="password" formControlName="password"></ion-input>
